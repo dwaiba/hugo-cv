@@ -1,0 +1,22 @@
+<section class="thirteen columns">
+  <h1>{{ .Site.Data.employment.name }}</h1>
+  {{ range .Site.Data.employment.source }}
+  <article>
+    <header>
+      <h1>{{ .prof }}</h1>
+      <span>
+        <address><b>{{ .place }}</b><br/></address>
+        <time>{{ .time }}<br/></time>
+      </span>
+    </header>
+      <ul>
+    <li>{{ .description }}</li>
+     </ul> 
+    <ul>
+      <li><i class="fa fa-ellipsis-v"></i>&nbsp;&nbsp;{{ .description1 }}</li>
+      <li><i class="fa fa-ellipsis-v"></i>&nbsp;&nbsp;{{ .description2 }}</li>
+      <li><i class="fa fa-asterisk"></i>&nbsp;&nbsp;<b>{{ .description3 }}</b></li>
+    </ul>
+  </article>
+  {{ end }}
+</section>
